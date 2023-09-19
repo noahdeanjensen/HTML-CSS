@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Form</title>
+</head>
+<body>
+    <h1>Student Information Form</h1>
+    <form action="" method="get">
+        <!-- First Name Field -->
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        <br><br>
+        
+        <!-- Last Name Field -->
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        <br><br>
+        
+        <!-- Expected Move-in Date Field -->
+        <label for="move_in_date">Expected Move-in Date:</label>
+        <input type="date" id="move_in_date" name="move_in_date" required>
+        <br><br>
+        
+        <!-- Reset Button -->
+        <input type="reset" value="Reset">
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Get the current date in the format YYYY-MM-DD
+        const currentDate = new Date().toISOString().split('T')[0];
+
+        // Set the min attribute of the date input to the current date
+        document.getElementById('move_in_date').setAttribute('min', currentDate);
+    </script>
+</body>
+</html>
